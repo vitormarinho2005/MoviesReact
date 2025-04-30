@@ -1,0 +1,245 @@
+/* Definição de variáveis para a cor principal e cores de fundo */
+:root {
+  --primary-color: #e50914; /* Cor vermelha do Netflix */
+  --secondary-color: #222222; /* Fundo escuro */
+  --text-color-light: #ffffff; /* Texto claro */
+  --text-color-dark: #333333; /* Texto escuro */
+  --border-radius: 8px; /* Bordas arredondadas para botões */
+  --font-family: 'Helvetica Neue', Arial, sans-serif; /* Fonte similar ao Netflix */
+  font-size: 16px;
+  font-family: var(--font-family);
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  background-color: var(--secondary-color);
+  color: var(--text-color-light);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Estilo geral do body */
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--secondary-color);
+}
+
+/* Links */
+a {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff4c4c; /* Vermelho claro quando passar o mouse */
+}
+
+/* Cabeçalho */
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--text-color-light);
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Barra de navegação */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #141414; /* Cor de fundo mais escura para o menu */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+nav .logo {
+  height: 40px;
+  width: auto;
+}
+
+nav .nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+nav .nav-links a {
+  font-size: 1rem;
+  color: var(--text-color-light);
+}
+
+nav .nav-links a:hover {
+  color: var(--primary-color);
+}
+
+/* Botões */
+button {
+  border-radius: var(--border-radius);
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1rem;
+  font-weight: 500;
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  cursor: pointer;
+  transition: all 0.25s;
+}
+
+button:hover {
+  background-color: #ff4c4c;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Cartões de filmes */
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 3rem 1rem;
+  margin-top: 80px; /* Ajuste para não sobrepor a barra de navegação */
+}
+
+.movie-card {
+  background-color: #333;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-bottom: 3px solid #444;
+}
+
+.movie-card .movie-info {
+  padding: 1rem;
+}
+
+.movie-card h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--text-color-light);
+  margin: 0;
+}
+
+.movie-card p {
+  font-size: 1rem;
+  color: var(--text-color-light);
+}
+
+.movie-card .details-btn {
+  display: block;
+  margin-top: 1rem;
+  text-align: center;
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+}
+
+.movie-card .details-btn:hover {
+  background-color: #ff4c4c;
+}
+
+/* Mensagens de erro */
+.error {
+  color: red;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Estado de carregamento */
+.loading {
+  font-size: 1.5rem;
+  color: var(--text-color-light);
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Tela de detalhes */
+.movie-details {
+  padding: 2rem;
+  background-color: #333;
+  color: var(--text-color-light);
+  margin-top: 80px;
+}
+
+.movie-details img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+.movie-details .details-info {
+  margin-top: 2rem;
+}
+
+.movie-details .details-info h2 {
+  font-size: 2rem;
+  color: var(--text-color-light);
+}
+
+.movie-details .details-info p {
+  font-size: 1.2rem;
+  color: var(--text-color-light);
+}
+
+.movie-details .back-btn {
+  margin-top: 1rem;
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius);
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  font-weight: 500;
+  text-align: center;
+}
+
+.movie-details .back-btn:hover {
+  background-color: #ff4c4c;
+}
+
+/* Estilos para a página de favoritos */
+.favorites {
+  padding: 3rem;
+  background-color: #141414;
+  color: var(--text-color-light);
+  min-height: 100vh;
+}
+
+.favorites h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.favorites .movie-card {
+  margin-bottom: 2rem;
+}

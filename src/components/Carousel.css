@@ -1,0 +1,21 @@
+.carousel-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    width: 100%;
+    border-radius: 8px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.carousel-title {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+}

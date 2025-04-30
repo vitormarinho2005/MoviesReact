@@ -1,0 +1,45 @@
+.movie-details {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.details-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.details-content img {
+  width: 300px;
+  border-radius: 8px;
+}
+
+.info {
+  max-width: 500px;
+}
+
+.favorite-button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.favorite-button:hover {
+  background-color: #e65c00;
+}

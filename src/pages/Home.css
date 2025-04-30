@@ -1,0 +1,86 @@
+/* Estilos para a página Home */
+.home {
+    padding: 2rem;
+    text-align: center;
+    background-color: #141414;  /* Fundo escuro, semelhante ao Netflix */
+    color: #fff;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #e5e5e5;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.movie-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.movie-list .movie-card {
+    background-color: #333;  /* Cartões com fundo escuro */
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6); /* Sombra mais forte */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.movie-list .movie-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.8);  /* Sombra mais forte no hover */
+}
+
+.movie-list .movie-card img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    height: 350px;  /* Aumenta a altura das imagens */
+    border-bottom: 3px solid #444;  /* Adiciona uma borda entre imagem e título */
+}
+
+.movie-list .movie-card h3 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: #e5e5e5;
+    text-align: center;
+}
+
+.movie-list .movie-card p {
+    font-size: 1rem;
+    color: #aaa;
+    text-align: center;
+}
+
+.movie-list .movie-card .details-btn {
+    display: block;
+    margin-top: 1rem;
+    text-align: center;
+    background-color: #e50914;  /* Vermelho Netflix */
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.movie-list .movie-card .details-btn:hover {
+    background-color: #f40612;  /* Hover com tom mais escuro de vermelho */
+}
+
+.error {
+    color: #e50914;  /* Cor vermelha para erros */
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+.loading {
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 2rem;
+}
