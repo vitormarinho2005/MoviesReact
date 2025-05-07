@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
-import About from './pages/About'; // Página sobre
-import Contact from './pages/Contact'; // Página de contato
+import Login from './pages/Login/Login';
+import PrivateRoute from './components/PrivateRoute';
 import './App.css';
 
 export default function App() {
@@ -10,8 +10,15 @@ export default function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
+        <Route
+          path="/"
+          element={
+            <PrivateRoute>
+              <Home />
+            </PrivateRoute>
+          }
+        />
       </Routes>
     </div>
   );
